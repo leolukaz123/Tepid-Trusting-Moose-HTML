@@ -7,6 +7,14 @@ import Form1 from '../components/form1'
 import Footer from '../components/footer'
 
 const Home = (props) => {
+    // call the api route / hello when the button is clicked
+    const vercel = {
+      hello: async () => {
+        const res = await fetch('/api/hello')
+        const data = await res.json()
+        console.log(data)
+      }
+    }
   return (
     <>
       <div className="home-container">
@@ -19,6 +27,7 @@ const Home = (props) => {
           <Component1 rootClassName="component1-root-class-name">
             <Form1 rootClassName="form1-root-class-name"></Form1>
           </Component1>
+          <button onClick={()=>vercel.hello}>Click me</button>
           <Footer rootClassName="footer-root-class-name"></Footer>
         </div>
       </div>
