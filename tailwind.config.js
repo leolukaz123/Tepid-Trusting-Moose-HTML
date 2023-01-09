@@ -59,7 +59,7 @@ module.exports = {
   },
   "plugins": [],
   "content": [
-    "./src/**/*.{html,js,ts,jsx,tsx}",
-    "./*.html"
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}"
   ]
 }
